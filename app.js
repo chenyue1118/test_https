@@ -7,6 +7,12 @@ const app = express()
 
 app.use(express.static('./public'))
 
+app.use('/test', (req, res) => {
+	const query = req.query
+	console.log('query', query)
+	res.send({"statue": true})
+})
+
 const privateKey = fs.readFileSync(path.join(__dirname, './pathway/private.pem'), 'utf8')
 const certificate = fs.readFileSync(path.join(__dirname, './pathway/file.crt'), 'utf8')
 const credentials = {key: privateKey, cert: certificate}
