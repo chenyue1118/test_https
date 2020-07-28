@@ -2,12 +2,19 @@ const express = require('express')
 const path = require('path')
 const fs = require('fs')
 const https = require('https')
+const os = require('os')
 
 const app = express()
 
 app.use(express.static('./public'))
 
 app.use('/test', (req, res) => {
+	// console.log(os)
+	console.log(os.type())
+	console.log(os.platform())
+	console.log(os.arch())
+	console.log(os.cpus())
+	console.log(os.uptime())
 	const query = req.query
 	console.log('query', query)
 	res.send({"statue": true})
