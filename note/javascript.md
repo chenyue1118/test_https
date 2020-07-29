@@ -27,3 +27,10 @@ function download () {}
 
 ### node 中 module.exports 与 exports 有什么区别
 解释：exports 是 module.exports 的引用，如果 exports 没有重新赋值，则二者没有任何区别
+
+### Blob对象
+```
+new Blob(data[, options])
+参数data必须是数组
+参数options是对Blod对象的配置属性，目前也只有type也就是相关的MIME需要设置type的值，'text/csv,charset=UTF-8'设置csv格式，并设置编码为UTF-8，'text/html'，设置成html格式
+```

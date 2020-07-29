@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <img id="image" src="" alt="">
+    <input id="files" type="file" />
+    <a id="down" target="_blank" download>下载</a>
+    <script type="text/javascript">
+      var image = document.querySelector('#image')
+      var files = document.querySelector('#files')
+      var down = document.querySelector('#down')
+      files.onchange = function(e) {
+        var objectURL = e.target.files[0]
+        var url = window.URL.createObjectURL(objectURL)
+        image.src = url
+        down.href= url
+        window.URL.revokeObjectURL(objectURL)
+      }
+
+      // 在浏览器 Console 面板输入
+      // var link = document.createElement('a'); link.href = document.getElementById('image').src;link.download = '1.jpg';link.click();
+
+
+      // TODO:
+      // blob:https://www.bilibili.com/0fcedb84-51d1-4d62-b3fe-193a3e98498f
+      // blob:https://www.bilibili.com/b1ceab6d-4fe5-4438-9a93-1ac40fb86b18
+      // var link = document.createElement('a'); link.href = 'blob:https://www.bilibili.com/b1ceab6d-4fe5-4438-9a93-1ac40fb86b18';link.download = '1.mp4';link.click();
+      // http://cn-jsnt2-dx-v-08.bilivideo.com/upgcxcode/63/28/86092863/86092863-1-30015.m4s?expires=1596019343&platform=pc&ssig=v1wogVpubnx6YEIxwteACg&oi=2088725826&trid=5624d3c9b21e49bd9d2a7d43f9441a56u&nfc=1&nfb=maPYqpoel5MI3qOUX6YpRA==&cdnid=4530&mid=0&cip=61.147.236.169&orderid=0,3&agrr=1&logo=80000000
+      // https://cn-jszj-dx-v-08.bilivideo.com/upgcxcode/63/28/86092863/86092863-1-30216.m4s?expires=1596018745&platform=pc&ssig=bLClUhbRpygTszb7lakWtg&oi=2088725826&trid=8faf475d4dc448b6b3458d48dc0cdb4bu&nfc=1&nfb=maPYqpoel5MI3qOUX6YpRA==&cdnid=2727&mid=0&cip=222.186.35.73&orderid=0,3&agrr=1&logo=80000000
+    </script>
+  </body>
+</html>
