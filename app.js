@@ -36,6 +36,12 @@ app.use('/test_ip', (req, res) => {
 	})
 })
 
+app.use('/test_helmet', (req, res) => {
+	// 为你的网站带上帽子 — 使用 helmet 保护 Express 应用
+	// https://juejin.im/post/5a24fd8f51882509e5438247
+	res.send('test_helmet')
+})
+
 const privateKey = fs.readFileSync(path.join(__dirname, './pathway/private.pem'), 'utf8')
 const certificate = fs.readFileSync(path.join(__dirname, './pathway/file.crt'), 'utf8')
 const credentials = {key: privateKey, cert: certificate}
@@ -43,8 +49,12 @@ const credentials = {key: privateKey, cert: certificate}
 const httpsServer = https.createServer(credentials, app)
 const SSlPORT = 8001
 
-httpsServer.listen(SSlPORT, '0.0.0.0', () => {
-  console.log(`https listen ${SSlPORT}`);
+// httpsServer.listen(SSlPORT, '0.0.0.0', () => {
+//   console.log(`https listen ${SSlPORT}`);
+// })
+
+app.listen(SSlPORT, () => {
+	console.log(`http listen ${SSlPORT}`);
 })
 
 
