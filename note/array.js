@@ -108,3 +108,21 @@ console.log(denseKeys);  // [0, 1, 2]
 ```
 [].lastIndexOf('a')
 ```
+
+### Array.prototype.maP()
+每个元素调用一次提供的函数，返回一个新数组
+```
+[].map(item => item * 2)
+```
+
+### Array.prototype.pop()
+从数组中删除最后一个元素，并返回该元素的值。此方法会更改数组的长度。
+```
+[].pop()
+```
+
+### Array.prototype.reduce()
+对数组中的每个元素执行一个提供的reducer函数（升序执行），降其结果汇总为单个返回值
+```
+[1, 2, 3, 4].reduce((total, item) => total + item, 0)
+```
