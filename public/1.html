@@ -5,184 +5,184 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <title>支付成功</title>
     <style media="screen">
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; }
 
-    html, body, .pay-success {
-      width: 100%;
-      height: 100%; }
-
-    .pay-success {
-      padding-top: 42px; }
-      .pay-success .pay-mask {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 9998;
-        background: rgba(0, 0, 0, 0.7); }
-      .pay-success .pay-order-wrapper {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 9999;
+      html, body, .pay-success {
         width: 100%;
-        height: 42px;
-        background: #f4f4f4;
-        overflow: hidden; }
-        .pay-success .pay-order-wrapper .order-hide {
+        height: 100%; }
+
+      .pay-success {
+        padding-top: 42px; }
+        .pay-success .pay-mask {
           display: none;
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 9998;
+          background: rgba(0, 0, 0, 0.7); }
+        .pay-success .pay-order-wrapper {
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 9999;
           width: 100%;
           height: 42px;
-          text-align: center; }
-          .pay-success .pay-order-wrapper .order-hide .btn-txt {
-            display: inline-block;
+          background: #f4f4f4;
+          overflow: hidden; }
+          .pay-success .pay-order-wrapper .order-hide {
+            display: none;
+            width: 100%;
             height: 42px;
-            line-height: 42px;
-            padding-right: 8px;
-            font-size: 14px;
-            color: #333; }
-          .pay-success .pay-order-wrapper .order-hide .icon-onload {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            margin-top: 9px;
-            vertical-align: top;
-            transform: rotateZ(180deg);
-            animation: downscale 0.5s ease-in 100000; }
-        .pay-success .pay-order-wrapper .order-show {
-          display: none;
-          width: 100%;
-          height: 40%;
-          padding: 12px; }
-          .pay-success .pay-order-wrapper .order-show .list {
-            width: 100%;
-            display: flex; }
-            .pay-success .pay-order-wrapper .order-show .list .name {
-              flex: 0 0 100px;
-              height: 30px;
-              line-height: 30px;
+            text-align: center; }
+            .pay-success .pay-order-wrapper .order-hide .btn-txt {
+              display: inline-block;
+              height: 42px;
+              line-height: 42px;
+              padding-right: 8px;
               font-size: 14px;
               color: #333; }
-            .pay-success .pay-order-wrapper .order-show .list .info {
-              flex: 1;
-              height: 30px;
-              line-height: 30px;
-              font-size: 14px;
-              color: #333; }
-            .pay-success .pay-order-wrapper .order-show .list .price {
-              font-size: 16px;
-              color: #f00; }
-          .pay-success .pay-order-wrapper .order-show .success {
+            .pay-success .pay-order-wrapper .order-hide .icon-onload {
+              display: inline-block;
+              width: 24px;
+              height: 24px;
+              margin-top: 9px;
+              vertical-align: top;
+              transform: rotateZ(180deg);
+              animation: downscale 0.5s ease-in 100000; }
+          .pay-success .pay-order-wrapper .order-show {
+            display: none;
             width: 100%;
-            padding: 12px 0; }
-            .pay-success .pay-order-wrapper .order-show .success .icon-success {
-              display: block;
-              width: 100px;
-              height: 100px;
-              margin: 0 auto; }
-          .pay-success .pay-order-wrapper .order-show .trips {
-            height: 28px;
-            line-height: 28px;
-            font-size: 12px;
-            text-align: center; }
-            .pay-success .pay-order-wrapper .order-show .trips span {
-              color: #f00; }
-          .pay-success .pay-order-wrapper .order-show .trips2 {
-            height: 28px;
-            line-height: 28px;
-            font-size: 12px;
-            color: #1890ff;
-            text-align: center; }
-          .pay-success .pay-order-wrapper .order-show .auto-open {
-            width: 100%;
-            padding: 12px 0; }
-            .pay-success .pay-order-wrapper .order-show .auto-open .btn {
-              display: block;
+            height: 40%;
+            padding: 12px; }
+            .pay-success .pay-order-wrapper .order-show .list {
+              width: 100%;
+              display: flex; }
+              .pay-success .pay-order-wrapper .order-show .list .name {
+                flex: 0 0 100px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                color: #333; }
+              .pay-success .pay-order-wrapper .order-show .list .info {
+                flex: 1;
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                color: #333; }
+              .pay-success .pay-order-wrapper .order-show .list .price {
+                font-size: 16px;
+                color: #f00; }
+            .pay-success .pay-order-wrapper .order-show .success {
+              width: 100%;
+              padding: 12px 0; }
+              .pay-success .pay-order-wrapper .order-show .success .icon-success {
+                display: block;
+                width: 100px;
+                height: 100px;
+                margin: 0 auto; }
+            .pay-success .pay-order-wrapper .order-show .trips {
+              height: 28px;
+              line-height: 28px;
+              font-size: 12px;
+              text-align: center; }
+              .pay-success .pay-order-wrapper .order-show .trips span {
+                color: #f00; }
+            .pay-success .pay-order-wrapper .order-show .trips2 {
+              height: 28px;
+              line-height: 28px;
+              font-size: 12px;
+              color: #1890ff;
+              text-align: center; }
+            .pay-success .pay-order-wrapper .order-show .auto-open {
+              width: 100%;
+              padding: 12px 0; }
+              .pay-success .pay-order-wrapper .order-show .auto-open .btn {
+                display: block;
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 4px;
+                background: #1890ff;
+                text-align: center;
+                color: #fff;
+                font-size: 14px; }
+            .pay-success .pay-order-wrapper .order-show .order-show-btn-up {
               width: 100%;
               height: 40px;
-              line-height: 40px;
-              border-radius: 4px;
-              background: #1890ff;
-              text-align: center;
-              color: #fff;
-              font-size: 14px; }
-          .pay-success .pay-order-wrapper .order-show .order-show-btn-up {
-            width: 100%;
-            height: 40px;
-            padding-top: 4px;
-            text-align: center; }
-            .pay-success .pay-order-wrapper .order-show .order-show-btn-up .icon-up {
-              display: inline-block;
-              width: 32px;
-              animation: upscale 0.5s infinite; }
-      .pay-success .pay-order-init {
-        height: 426px;}
-      .pay-success .pay-order-init .order-show{
-        display: block; }
-      .pay-success .pay-order-init .order-hide{
-        display: none; }
-      .pay-success .pay-order-show {
-        animation: infoshow 0.5s ease-in forwards; }
-        .pay-success .pay-order-show .order-show {
+              padding-top: 4px;
+              text-align: center; }
+              .pay-success .pay-order-wrapper .order-show .order-show-btn-up .icon-up {
+                display: inline-block;
+                width: 32px;
+                animation: upscale 0.5s infinite; }
+        .pay-success .pay-order-init {
+          height: 426px;}
+        .pay-success .pay-order-init .order-show{
           display: block; }
-        .pay-success .pay-order-show .order-hide {
+        .pay-success .pay-order-init .order-hide{
           display: none; }
-      .pay-success .pay-order-hide {
-        animation: infohide 0.5s forwards; }
-        .pay-success .pay-order-hide .order-show {
-          display: none; }
-        .pay-success .pay-order-hide .order-hide {
-          display: block; }
-      .pay-success .pay-iframe {
-        width: 100%;
-        height: 100%;
-        border: none; }
+        .pay-success .pay-order-show {
+          animation: infoshow 0.5s ease-in forwards; }
+          .pay-success .pay-order-show .order-show {
+            display: block; }
+          .pay-success .pay-order-show .order-hide {
+            display: none; }
+        .pay-success .pay-order-hide {
+          animation: infohide 0.5s forwards; }
+          .pay-success .pay-order-hide .order-show {
+            display: none; }
+          .pay-success .pay-order-hide .order-hide {
+            display: block; }
+        .pay-success .pay-iframe {
+          width: 100%;
+          height: 100%;
+          border: none; }
 
-    @keyframes infoshow {
-      0% {
-        height: 42px; }
-      40% {
-        height: 426px; }
-      60% {
-        height: 390px; }
-      80% {
-        height: 426px; }
-      90% {
-        height: 410px; }
-      100% {
-        height: 426px; } }
+      @keyframes infoshow {
+        0% {
+          height: 42px; }
+        40% {
+          height: 426px; }
+        60% {
+          height: 390px; }
+        80% {
+          height: 426px; }
+        90% {
+          height: 410px; }
+        100% {
+          height: 426px; } }
 
-    @keyframes infohide {
-      0% {
-        height: 40%; }
-      100% {
-        height: 42px;
-        /* transform: translateY(0px); */ } }
+      @keyframes infohide {
+        0% {
+          height: 40%; }
+        100% {
+          height: 42px;
+          /* transform: translateY(0px); */ } }
 
-    @keyframes upscale {
-      0% {
-        transform: translateY(0px); }
-      30% {
-        transform: translateY(2px); }
-      60% {
-        transform: translateY(-2px); }
-      100% {
-        transform: translateY(0px); } }
+      @keyframes upscale {
+        0% {
+          transform: translateY(0px); }
+        30% {
+          transform: translateY(2px); }
+        60% {
+          transform: translateY(-2px); }
+        100% {
+          transform: translateY(0px); } }
 
-    @keyframes downscale {
-      0% {
-        transform: translateY(0px) rotateZ(180deg); }
-      30% {
-        transform: translateY(2px) rotateZ(180deg); }
-      60% {
-        transform: translateY(-2px) rotateZ(180deg); }
-      100% {
-        transform: translateY(0px) rotateZ(180deg); } }
+      @keyframes downscale {
+        0% {
+          transform: translateY(0px) rotateZ(180deg); }
+        30% {
+          transform: translateY(2px) rotateZ(180deg); }
+        60% {
+          transform: translateY(-2px) rotateZ(180deg); }
+        100% {
+          transform: translateY(0px) rotateZ(180deg); } }
     </style>
   </head>
   <body>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script type="text/javascript">
+      $.ajax({
+        url: '',
+        type: 'post',
+        dataType: 'json',
+        data: {
+          "username": "",
+          "password": ""
+        },
+        // data: JSON.stringify({
+        //   "username": "",
+        //   "password": ""
+        // }),
+        contentType: 'application/json;charset=UTF-8',
+        success: function(res) {
+          console.log(res);
+        }
+      })
+    </script>
+  </body>
+</html>
