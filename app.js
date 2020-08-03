@@ -42,6 +42,11 @@ app.use('/test_helmet', (req, res) => {
 	res.send('test_helmet')
 })
 
+app.use('/wxlink', (req, res) => {
+	console.log('收到请求-', new Date());
+	res.redirect('https://www.baidu.com');
+})
+
 const privateKey = fs.readFileSync(path.join(__dirname, './pathway/private.pem'), 'utf8')
 const certificate = fs.readFileSync(path.join(__dirname, './pathway/file.crt'), 'utf8')
 const credentials = {key: privateKey, cert: certificate}
