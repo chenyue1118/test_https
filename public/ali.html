@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>支付测试页</title>
+  </head>
+  <body>
+    <button class="btn" type="button" name="button">点击测试返回</button>
+    <br />
+    <a href="javascript:history.go(-1);">向上一页</a>
+    <script type="text/javascript">
+      window.onload = function() {
+        // window.history.go(-1)
+        document.querySelector('.btn').onclick= function() {
+          // 返回上一页
+          window.history.go(-1)
+        }
+      }
+    </script>
+  </body>
+</html>

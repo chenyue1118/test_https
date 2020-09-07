@@ -47,6 +47,10 @@ app.use('/wxlink', (req, res) => {
 	res.redirect('https://www.baidu.com');
 })
 
+app.use('/testali', (req, res) => {
+	res.redirect('./ali.html')
+})
+
 const privateKey = fs.readFileSync(path.join(__dirname, './pathway/private.pem'), 'utf8')
 const certificate = fs.readFileSync(path.join(__dirname, './pathway/file.crt'), 'utf8')
 const credentials = {key: privateKey, cert: certificate}
